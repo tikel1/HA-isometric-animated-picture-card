@@ -65,11 +65,11 @@ Fan: two-second seamless loop at 60 fps (≈ 72 frames).
 
 * Export Composition ▸ Add to Render Queue
 
-** Format = PNG sequence
+	* Format = PNG sequence
 
-** Channels = RGB + Alpha
+	* Channels = RGB + Alpha
 
-** Color = Straight (un-matted)
+	* Color = Straight (un-matted)
 
 Filenames example: blinds_000.png … blinds_099.png, fan_000.png ….
 
