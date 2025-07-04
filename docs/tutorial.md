@@ -31,5 +31,9 @@ Pro tips:
 
 
 ## 2. Animate it in Kling
+ 
+Use any image to video tools in order to animate the image. You can create animation sequences of the covers, fans, day/night, etc'. In this example, I used [Kling.ai](https://klingai.com/h5-app/invitation?code=7BLZEBP5VTT5) (referral link) with the following prompt.
 
-Use any image to video tools in order to animate the image. You can create animation sequences of the covers, fans, day/night, etc'. In this example, I used [Kling.ai](https://klingai.com/h5-app/invitation?code=7BLZEBP5VTT5) (referral link).
+**Prompt:**
+> The serene minimalist bedroom with a herringbone floor and soft green walls transitions as the dark electric window blinds slowly slide down, the ceiling fan begins rotating smoothly, captured in isometric perspective with a stationary camera
+
