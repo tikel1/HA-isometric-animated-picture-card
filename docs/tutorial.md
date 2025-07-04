@@ -11,17 +11,17 @@ All the heavy lifting runs in the browser; the Home Assistant server just suppli
 
 
 ## 0. Prerequisites
-| Tool | Why you need it |Typical alternatives|
+| I Used | Why you need it |Typical alternatives|
 |------|---------|---------------|
-| Image-generation model (ChatGPT, DALL·E, Midjourney…) | Generate the photoreal isometric still |
-| [Kling.ai](https://klingai.com/h5-app/invitation?code=7BLZEBP5VTT5) (referral link) | Turn the still into a short MP4 animation |
-| Adobe After Effects (or any NLE) | Split MP4 → PNG sequences |
-| FFmpeg 6.x | Encode all-I-frame WebM |
-| Home-Assistant 2024.4+ | Lovelace dashboard |
+| ChatGPT | Produce the first photoreal isometric cut-away still of your room | Any image-generation model (ChatGPT, DALL·E, Midjourney…)
+| [Kling.ai](https://klingai.com/h5-app/invitation?code=7BLZEBP5VTT5) (referral link) | Add motion: blinds closing, fan spinning, day-to-night, etc. | Runway, Pika, DIFY
+| Adobe After Effects| Split the video into separate PNG frames, one folder per moving part | DaVinci Resolve, Blender’s VSE
+| FFmpeg 6.x | Encode those PNGs as VP9-WebM, every frame an I-frame | Works on macOS, Linux, Windows
+| Home-Assistant 2024.4+ | Where the custom cards live | Core, OS, Container—any flavour
 
 ---
 
-## 1. Create the still
+## 1. Generate the isometric still
 
 Upload an image of the room you wish to create to chatGPT along with this prompt.
 
@@ -34,9 +34,9 @@ Tips:
 * Use wide lense
 
 
-## 2. Animate it in Kling
+## 2. Add motion with an image-to-video model
  
-Use any image to video tools in order to animate the image. You can create animation sequences of the covers, fans, day/night, etc'. In this example, I used [Kling.ai](https://klingai.com/h5-app/invitation?code=7BLZEBP5VTT5) (referral link) with the following prompt.
+Feed the still into [Kling.ai](https://klingai.com/h5-app/invitation?code=7BLZEBP5VTT5) (or another tool). You can create animation sequences of the covers, fans, day/night, etc'. In this example, I used [Kling.ai](https://klingai.com/h5-app/invitation?code=7BLZEBP5VTT5) (referral link) with the following prompt.
 
 **Prompt:**
 > The serene minimalist bedroom with a herringbone floor and soft green walls transitions as the dark electric window blinds slowly slide down, the ceiling fan begins rotating smoothly, captured in isometric perspective with a stationary camera
@@ -51,17 +51,27 @@ Download the MP4 once you’re happy.
 
 ---
 
-## 3. Export PNG sequences
+## 3. Split the MP4 into PNG sequences
 
-We take the one-piece Kling video and break it into separate, transparent PNG sequences—one for every moving layer—inside After Effects. Then we encode those sequences with FFmpeg into lightweight WebM files where every frame is a key-frame, making them seek-perfect and hardware-accelerated for the custom cards.
+Open After Effects (any editor that can export PNG with alpha works).
 
+For each moving object:
 
-| Layer | Frames | Export |
-|-------|--------|--------|
-| **Blinds** | 100 frames (0 % → 100 %) | PNG sequence **RGB + Alpha**<br> `blinds_000.png … blinds_099.png` |
-| **Fan**    | 72 frames @ 60 fps (2 s loop) | PNG sequence **RGB + Alpha**<br> `fan_000.png … fan_071.png` |
+* Import the MP4.
 
-*(Mobile-fallback will load these PNGs.)*
+* Create a comp and trim it so the action starts and ends cleanly.
+Blinds: first frame = 0 %, last frame = 100 %. Aim for exactly 100 frames at 25 fps.
+Fan: two-second seamless loop at 60 fps (≈ 72 frames).
+
+* Export Composition ▸ Add to Render Queue
+
+** Format = PNG sequence
+
+** Channels = RGB + Alpha
+
+** Color = Straight (un-matted)
+
+Filenames example: blinds_000.png … blinds_099.png, fan_000.png ….
 
 ---
 
