@@ -1,10 +1,19 @@
 # Animated Room Card – Complete Walk-Through  
 
 
+This tutorial shows you how to turn a single photo of a real room into a fully animated “doll-house” card in Home Assistant, where
+
+* a WebM sequence of blinds glides smoothly to whatever percentage the cover entity reports, and
+* a WebM fan loop spins at a speed that matches the fan entity.
+
+All the heavy lifting runs in the browser; the Home Assistant server just supplies entity states.
+
+
+
 ## 0. Prerequisites
-| Tool | Purpose |
-|------|---------|
-| ChatGPT (or any other image generation model) | Generate the photoreal isometric still |
+| Tool | Why you need it |Typical alternatives|
+|------|---------|---------------|
+| Image-generation model (ChatGPT, DALL·E, Midjourney…) | Generate the photoreal isometric still |
 | [Kling.ai](https://klingai.com/h5-app/invitation?code=7BLZEBP5VTT5) (referral link) | Turn the still into a short MP4 animation |
 | Adobe After Effects (or any NLE) | Split MP4 → PNG sequences |
 | FFmpeg 6.x | Encode all-I-frame WebM |
@@ -76,3 +85,56 @@ ffmpeg -framerate 60 -i fan_%03d.png \
        -c:v libvpx-vp9 -pix_fmt yuva420p \
        -b:v 0 -crf 30 \
        fan_loop.webm
+
+
+## 5. Copy assets into Home-Assistant
+
+/config/www/images/3d_floorplan/Isometric Bedroom/
+  ├─ blinds_000.png … blinds_099.png
+  ├─ fan_000.png … fan_071.png
+  ├─ blinds_100f.webm
+  └─ fan_loop.webm
+
+
+## 6. Add the custom cards
+Settings → Dashboards → Resources
+
+/local/ha-blinds-frame-card.js?v=15   (JavaScript Module)
+/local/ha-fan-loop-card.js?v=2        (JavaScript Module)
+
+
+(Files live in www/ inside this repo – copy them to /config/www.)
+
+## 7. YAML for your picture-elements view
+
+type: picture-elements
+image: /local/images/<YOUR_FOLDER>/bg.jpg          # ⬅ background still
+
+elements:
+  # ── Blinds ─────────────────────────────────────
+  - type: custom:ha-blinds-frame-card
+    entity: cover.<YOUR_BLINDS_ENTITY>             # e.g. cover.bedroom_blinds
+    src: /local/images/<YOUR_FOLDER>/blinds_100f.webm
+    png_path: /local/images/<YOUR_FOLDER>/blinds_  # prefix for blinds_000.png …
+    frames: 100
+    fps: 25
+    motorSpeedPercent: 10        # adjust to your motor
+    motorSpeedSeconds: 5
+    cooldownMs: 15000
+    style:
+      left: 82%
+      top: 44%
+      width: 32%
+
+  # ── Fan ────────────────────────────────────────
+  - type: custom:ha-fan-loop-card
+    entity: fan.<YOUR_FAN_ENTITY>                  # e.g. fan.bedroom_ceiling
+    src: /local/images/<YOUR_FOLDER>/fan_loop.webm
+    png_path: /local/images/<YOUR_FOLDER>/fan_     # prefix for fan_000.png …
+    frames: 72
+    fps: 60
+    style:
+      left: 50%
+      top: 18%
+      width: 90px
+
