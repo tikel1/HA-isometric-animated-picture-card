@@ -9,8 +9,8 @@
 ## 0. Prerequisites
 | Tool | Purpose |
 |------|---------|
-| ChatGPT / DALL·E 3 | Generate the photoreal isometric still |
-| Kling.ai | Turn the still into a short MP4 animation |
+| ChatGPT (or any other image generation model) | Generate the photoreal isometric still |
+| [Kling.ai](https://klingai.com/h5-app/invitation?code=7BLZEBP5VTT5) (referral link) | Turn the still into a short MP4 animation |
 | Adobe After Effects (or any NLE) | Split MP4 → PNG sequences |
 | FFmpeg 6.x | Encode all-I-frame WebM |
 | Home-Assistant 2024.4+ | Lovelace dashboard |
