@@ -21,3 +21,4 @@
 
 **Prompt**
 
+### Create a 1:1 isometric cut-away render with photorealistic materials and lighting—keeping the asymmetric “doll-house” perspective while matching the real furniture, colors, and floor pattern from your room
