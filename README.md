@@ -7,7 +7,7 @@ A photo-real **isometric room** that reacts to your smart-home entities:
 blinds glide smoothly to any %, the ceiling-fan spins at live speed,
 and everything runs client-side with two tiny JavaScript cards.
 
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-donate-yellow?logo=buymeacoffee)](https://www.buymeacoffee.com/YOUR_HANDLE)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-donate-yellow?logo=buymeacoffee)](https://buymeacoffee.com/tikel)
 
 <p align="center">
   <img src="docs/demo.gif" width="550">
