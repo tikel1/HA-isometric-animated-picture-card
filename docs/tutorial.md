@@ -19,6 +19,12 @@
 
 ## 1. Create the still
 
+Upload an image of the room you wish to create to chatGPT along with this prompt.
+
 **Prompt**
 
 > Create a 1:1 isometric cut-away render with photorealistic materials and lighting—keeping the asymmetric “doll-house” perspective while matching the real furniture, colors, and floor pattern from your room
+
+Pro tips:
+* Make sure the room is lit and light bulbs and lamps are off
+* Use wide lense
