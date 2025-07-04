@@ -1,10 +1,5 @@
 # Animated Room Card – Complete Walk-Through  
-(from GPT prompt → Kling animation → Home-Assistant)
 
-> Works with **ha-blinds-frame-card v15** and **ha-fan-loop-card v2**  
-> Desktop uses WebM, mobile falls back to a pre-rendered PNG sequence.
-
----
 
 ## 0. Prerequisites
 | Tool | Purpose |
@@ -49,6 +44,9 @@ Download the MP4 once you’re happy.
 
 ## 3. Export PNG sequences
 
+We take the one-piece Kling video and break it into separate, transparent PNG sequences—one for every moving layer—inside After Effects. Then we encode those sequences with FFmpeg into lightweight WebM files where every frame is a key-frame, making them seek-perfect and hardware-accelerated for the custom cards.
+
+
 | Layer | Frames | Export |
 |-------|--------|--------|
 | **Blinds** | 100 frames (0 % → 100 %) | PNG sequence **RGB + Alpha**<br> `blinds_000.png … blinds_099.png` |
@@ -59,6 +57,12 @@ Download the MP4 once you’re happy.
 ---
 
 ## 4. Encode WebM (desktop)
+
+Download & install FFmpeg (Windows / PowerShell)
+
+> winget install --id Gyan.FFmpeg --source winget
+
+
 
 ```bash
 # blinds
