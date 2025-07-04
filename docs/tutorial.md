@@ -58,30 +58,28 @@ Open After Effects (any editor that can export PNG with alpha works).
 For each moving object:
 
 * Import the MP4.
-
 * Create a comp and trim it so the action starts and ends cleanly.
 Blinds: first frame = 0 %, last frame = 100 %. Aim for exactly 100 frames at 25 fps.
 Fan: two-second seamless loop at 60 fps (≈ 72 frames).
-
 * Export Composition ▸ Add to Render Queue
-
 	* Format = PNG sequence
-
 	* Channels = RGB + Alpha
-
 	* Color = Straight (un-matted)
+	* Filenames example: blinds_000.png … blinds_099.png, fan_000.png ….
 
-Filenames example: blinds_000.png … blinds_099.png, fan_000.png ….
+Result: two folders, each full of PNGs with transparent backgrounds.
+
 
 ---
 
-## 4. Encode WebM (desktop)
+## 4. Encode the sequences as seek-perfect WebM
 
 Download & install FFmpeg (Windows / PowerShell)
 
-> winget install --id Gyan.FFmpeg --source winget
+```bash
+winget install --id Gyan.FFmpeg --source winget
 
-
+Run the commands
 
 ```bash
 # blinds
@@ -97,8 +95,16 @@ ffmpeg -framerate 60 -i fan_%03d.png \
        fan_loop.webm
 
 
+* -g 1 -keyint_min 1 ⇒ GOP = 1 → instant seeking.
+* yuva420p keeps transparency.
+* Adjust -crf (lower = higher quality, larger file).
+
+
 ## 5. Copy assets into Home-Assistant
 
+Example structure (choose any folder names):
+
+```bash
 /config/www/images/3d_floorplan/Isometric Bedroom/
   ├─ blinds_000.png … blinds_099.png
   ├─ fan_000.png … fan_071.png
@@ -106,9 +112,15 @@ ffmpeg -framerate 60 -i fan_%03d.png \
   └─ fan_loop.webm
 
 
-## 6. Add the custom cards
-Settings → Dashboards → Resources
 
+
+## 6. Add the custom cards
+
+* Copy ha-blinds-frame-card.js and ha-fan-loop-card.js from this repo’s www/
+folder into /config/www/ on your HA instance.
+* Settings → Dashboards → Resources
+
+```bash
 /local/ha-blinds-frame-card.js?v=15   (JavaScript Module)
 /local/ha-fan-loop-card.js?v=2        (JavaScript Module)
 
