@@ -1,3 +1,5 @@
+![example](https://github.com/tikel1/HA-isometric-animated-picture-card/blob/main/examples/Isometric%20Bedroom.gif)
+
 # 🏡 Animated Room Card for Home-Assistant
 
 Bring your picture-elements dashboard to life:  
