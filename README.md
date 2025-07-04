@@ -1,36 +1,31 @@
-# HA isometric animated picture card
- Tiny custom cards that let Home-Assistant picture-elements play WebM loops and frame-accurate videos whose speed or frame instantly follows any entity state (0-100 % or presets)
-
 # 🏡 Animated Room Card for Home-Assistant
 
-A photo-real **isometric room** that reacts to your smart-home entities:
-blinds glide smoothly to any %, the ceiling-fan spins at live speed,
-and everything runs client-side with two tiny JavaScript cards.
+Bring your picture-elements dashboard to life:  
+*Blinds glide to any %, ceiling-fan spins at live speed—powered by two tiny JavaScript cards.*
 
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-donate-yellow?logo=buymeacoffee)](https://buymeacoffee.com/tikel)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-donate-yellow?logo=buymeacoffee)](https://www.buymeacoffee.com/tikel)
+
 
 <p align="center">
   <img src="docs/demo.gif" width="550">
 </p>
 
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="tikel" data-color="#FFDD00" data-emoji="☕"  data-font="Inter" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
-
 ---
 
 ## ✨ Features
-| Card | What it does |
-|------|--------------|
-| **`ha-blinds-frame-card.js`** | Plays a 0-→100 WebM sequence; seeks to the exact frame with easing and realistic motor timing. |
-| **`ha-fan-loop-card.js`**    | Loops a WebM and maps entity speed → `playbackRate` (percentage **or** preset). |
-| Mobile-safe  | Automatic PNG freeze-frame overlay—no grey “tap-to-play” triangle. |
-| Pure Lovelace| No custom HACS, no build step—copy & refresh. |
+| Card | Purpose |
+|------|---------|
+| **`ha-blinds-frame-card.js`** | Plays a 0→100 WebM sequence and seeks to the exact frame with easing + real-world motor timing. |
+| **`ha-fan-loop-card.js`**    | Loops a WebM and sets the `playbackRate` from entity speed (`percentage` *or* `preset_mode`). |
+| **Mobile-safe freeze frame** | The last frame is captured to a PNG overlay, so phones never show a grey “tap-to-play” icon. |
+| **Pure Lovelace** | No build step, no HACS—just copy two files into `/config/www`. |
 
 ---
 
 ## ⚡ Quick install
 
 ```yaml
-# Dashboards ▶ Resources
+# Dashboards → Resources
 resources:
   - url: /local/ha-blinds-frame-card.js?v=14
     type: module
