@@ -28,3 +28,8 @@ Upload an image of the room you wish to create to chatGPT along with this prompt
 Pro tips:
 * Make sure the room is lit and light bulbs and lamps are off
 * Use wide lense
+
+
+## 2. Animate it in Kling
+
+Use any image to video tools in order to animate the image. You can create animation sequences of the covers, fans, day/night, etc'. In this example, I used [Kling.ai](https://klingai.com/h5-app/invitation?code=7BLZEBP5VTT5) (referral link).
