@@ -94,8 +94,8 @@ We've included a **comprehensive tutorial** showing you how to create the exact 
 ### 1. **Installation**
 ```bash
 # Download the cards to your Home Assistant
-wget -O /config/www/ha-blinds-frame-card.js https://raw.githubusercontent.com/your-repo/ha-animation-cards/main/ha-blinds-frame-card.js
-wget -O /config/www/ha-fan-loop-card.js https://raw.githubusercontent.com/your-repo/ha-animation-cards/main/ha-fan-loop-card.js
+wget -O /config/www/ha-blinds-frame-card.js https://github.com/tikel1/HA-isometric-animated-picture-card/blob/main/www/ha-blinds-frame-card.js
+wget -O /config/www/ha-fan-loop-card.js https://github.com/tikel1/HA-isometric-animated-picture-card/blob/main/www/ha-fan-loop-card.js
 ```
 
 ### 2. **Add to Lovelace Resources**
@@ -295,13 +295,6 @@ We welcome contributions! Whether you're:
 - 🎨 **Sharing animations**
 - 💻 **Contributing code**
 
-**[See Contributing Guidelines](CONTRIBUTING.md)**
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -321,7 +314,7 @@ If this project helps you create amazing Home Assistant dashboards, please:
 - 🏠 **[Home Assistant Community](https://community.home-assistant.io/)**
 - 📱 **[Picture Elements Documentation](https://www.home-assistant.io/dashboards/picture-elements/)**
 - 🎬 **[WebM Format Guide](https://developers.google.com/web/fundamentals/media/video)**
-- 🤖 **[AI Animation Resources](docs/ai-resources.md)**
+- 🤖 **[AI Animation Resources](docs/ha-animation-cards-docs.md)**
 
 ---
 
