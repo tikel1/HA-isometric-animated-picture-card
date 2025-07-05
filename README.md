@@ -7,7 +7,12 @@ Bring your picture-elements dashboard to life:
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-donate-yellow?logo=buymeacoffee)](https://www.buymeacoffee.com/tikel)
 
-[![Buy Me a Coffee](examples/coffee.webp)](https://www.buymeacoffee.com/yourusername)
+<p align="center">
+  <a href="https://www.buymeacoffee.com/tikel" target="_blank">
+    ☕ <b>Buy me a coffee</b>
+  </a>
+</p>
+
 
 
 
