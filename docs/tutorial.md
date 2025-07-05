@@ -174,8 +174,6 @@ sudo apt install ffmpeg
 7. **Set filename:** `blinds_[###].png` (three digits)
 8. **Render** - this creates numbered PNG files
 
-**[INSERT EXAMPLE: After Effects interface showing render settings]**
-
 ### Convert to WebM Format
 
 Open terminal/command prompt in your PNG folder:
@@ -195,8 +193,6 @@ ffmpeg -framerate 60 -i fan_%03d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -c
 - `-g 1 -keyint_min 1` - makes every frame seekable (important for blinds)
 - `-crf 28/30` - quality setting (lower = better quality, bigger file)
 - `yuva420p` - preserves transparency
-
-**[INSERT EXAMPLE: Terminal showing successful conversion]**
 
 ---
 
@@ -253,8 +249,6 @@ Create this folder structure in `/config/www/`:
         ├── ...
         └── fan_071.png
 ```
-
-**[INSERT EXAMPLE: File manager showing correct folder structure]**
 
 ---
 
@@ -323,8 +317,6 @@ To find the right position values:
 2. **View your card** and see where the animation appears
 3. **Adjust the percentages** until it lines up with your background
 4. **Fine-tune the size** with width and height
-
-**[INSERT EXAMPLE: Dashboard showing positioned animations]**
 
 ---
 
@@ -404,8 +396,6 @@ style:
   transform: rotate(5deg)         # Slight rotation
   border-radius: 10px            # Rounded corners
 ```
-
-**[INSERT EXAMPLE: Advanced dashboard with multiple animations]**
 
 ---
 
