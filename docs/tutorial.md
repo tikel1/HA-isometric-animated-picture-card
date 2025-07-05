@@ -87,6 +87,7 @@ ffmpeg -framerate 25 -i blinds_%03d.png \
        -c:v libvpx-vp9 -pix_fmt yuva420p \
        -g 1 -keyint_min 1 -b:v 0 -crf 28 \
        blinds_100f.webm
+```
 
 # fan loop
 ffmpeg -framerate 60 -i fan_%03d.png \
