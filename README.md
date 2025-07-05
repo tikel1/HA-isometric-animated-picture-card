@@ -7,6 +7,9 @@ Bring your picture-elements dashboard to life:
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-donate-yellow?logo=buymeacoffee)](https://www.buymeacoffee.com/tikel)
 
+[![Buy Me a Coffee](https://media1.giphy.com/media/7kZE0z52Sd9zSESzDA/giphy.gif)](https://www.buymeacoffee.com/yourusername)
+
+
 
 <p align="center">
   <img src="docs/demo.gif" width="550">
