@@ -18,7 +18,7 @@ This repository provides custom Home Assistant cards that enable **smooth video 
 
 ## 🤖 **AI-Generated Animation Tutorial Included!**
 
-**📚 [Complete Step-by-Step AI Animation Guide](docs/ai-animation-guide.md)**
+**📚 [Complete Step-by-Step AI Animation Guide](docs/tutorial.md)**
 
 We've included a **comprehensive tutorial** showing you how to create the exact animations shown in our examples using **AI tools only** – no 3D software experience required! 
 
@@ -29,7 +29,7 @@ We've included a **comprehensive tutorial** showing you how to create the exact 
 - ⚡ Optimize animations for perfect performance
 - 🎯 Real examples: blinds, fans, and more
 
-**[💛 Support Me on Buy Me a Coffee](https://www.buymeacoffee.com/tikel)
+**[💛 Support Me on Buy Me a Coffee](https://www.buymeacoffee.com/tikel)**
 
 [![Buy Me a Coffee](examples/coffee.webp)](https://www.buymeacoffee.com/tikel)
 
