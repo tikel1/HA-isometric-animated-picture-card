@@ -112,7 +112,7 @@ Example structure (choose any folder names):
   ├─ fan_000.png … fan_071.png
   ├─ blinds_100f.webm
   └─ fan_loop.webm
-
+```
 
 
 ## 6. Add the custom cards
@@ -124,12 +124,13 @@ folder into /config/www/ on your HA instance.
 ```bash
 /local/ha-blinds-frame-card.js?v=15   (JavaScript Module)
 /local/ha-fan-loop-card.js?v=2        (JavaScript Module)
-
+```
 
 (Files live in www/ inside this repo – copy them to /config/www.)
 
 ## 7. YAML for your picture-elements view
 
+```bash
 type: picture-elements
 image: /local/images/<YOUR_FOLDER>/bg.jpg          # ⬅ background still
 
@@ -160,8 +161,7 @@ elements:
       left: 50%
       top: 18%
       width: 90px
-
-
+```
 png_path must be the prefix of your numbered PNGs (no index, no extension).
 
 The cards automatically fall back to those PNGs on mobile where autoplay may be blocked.
