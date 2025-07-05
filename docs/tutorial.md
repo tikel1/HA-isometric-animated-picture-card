@@ -13,7 +13,7 @@ The best part? **No 3D software experience required!** We'll use AI tools to do 
 
 By the end of this tutorial, you'll have a professional-looking isometric room visualization where every animated element responds to your actual Home Assistant entities in real-time.
 
-![Fan Animation Demo](examples/Isometric-Bedroom.gif)
+![Fan Animation Demo](../examples/Isometric-Bedroom.gif)
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ First, photograph your room with these tips:
 
 ### Generate the 3D Isometric Version
 
-![Original](examples/original.jpg)
+![Original](../examples/original.jpg)
 
 1. **Go to ChatGPT** and upload your room photo
 2. **Use this exact prompt:**
@@ -83,7 +83,7 @@ Think about what in your room moves:
 1. **Go to Kling.ai** and upload your isometric room image
 2. **Use this prompt:**
 
-![kling](examples/kling.jpg)
+![kling](../examples/kling.jpg)
 
 ```
 The serene minimalist bedroom with herringbone floor and soft green walls transitions as the dark electric window blinds slowly slide down completely closed. The ceiling fan remains stationary. Camera is completely stationary with isometric perspective maintained throughout.
@@ -112,7 +112,7 @@ The bedroom ceiling fan begins rotating smoothly and continuously. The blinds re
 ```
 
 **For animations like ceiling fans, it's recommended to render them separately. You can cut out the fan from the original image using Photoshop or any other editing tool, and then upload it to Kling as a separate asset.
-![fan](examples/isolated-fan.jpg)
+![fan](../examples/isolated-fan.jpg)
 
 3. **Download the result** - this should be a seamless loop
 
