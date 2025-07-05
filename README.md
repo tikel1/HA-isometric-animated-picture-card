@@ -1,3 +1,5 @@
+![Animation Demo](examples/Isometric Bedroom.gif)
+
 # 🎬 Home Assistant Animation Cards
 
 > **Transform your Home Assistant dashboard with stunning animated visualizations**
@@ -12,7 +14,7 @@
 
 This repository provides custom Home Assistant cards that enable **smooth video playback and frame-by-frame animations** within your dashboard. No more static icons – bring your smart home to life with dynamic, responsive visualizations that react to your device states in real-time.
 
-## 🤖 **Bonus: AI-Generated Animation Tutorial Included!**
+## 🤖 **AI-Generated Animation Tutorial Included!**
 
 **📚 [Complete Step-by-Step AI Animation Guide](docs/ai-animation-guide.md)**
 
@@ -64,10 +66,10 @@ We've included a **comprehensive tutorial** showing you how to create the exact 
 
 ## 🎥 Demo
 
-![Blinds Animation Demo](demo/blinds-demo.gif)
+![Blinds Animation Demo](examples/blinds.gif)
 *Blinds automatically animate based on cover position*
 
-![Fan Animation Demo](demo/fan-demo.gif)
+![Fan Animation Demo](examples/fan.gif)
 *Fan speed dynamically matches entity speed percentage*
 
 ---
