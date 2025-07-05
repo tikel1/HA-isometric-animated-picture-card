@@ -1,4 +1,4 @@
-![Animation Demo](examples/Isometric Bedroom.gif)
+![Animation Demo](examples/Isometric Bedroom.gif)*demo*
 
 # 🎬 Home Assistant Animation Cards
 
@@ -67,9 +67,11 @@ We've included a **comprehensive tutorial** showing you how to create the exact 
 ## 🎥 Demo
 
 ![Blinds Animation Demo](examples/blinds.gif)
+
 *Blinds automatically animate based on cover position*
 
 ![Fan Animation Demo](examples/fan.gif)
+
 *Fan speed dynamically matches entity speed percentage*
 
 ---
