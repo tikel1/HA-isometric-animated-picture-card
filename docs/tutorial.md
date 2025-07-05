@@ -114,12 +114,19 @@ Example structure (choose any folder names):
   └─ fan_loop.webm
 ```
 
+You’ll need both the WebM clips and their matching PNG frame sequences.
+Many mobile browsers can’t display a paused WebM cleanly, so when the animation stops the card hides the video layer and shows the correct PNG frame instead—ensuring the still image is always visible on every device.
 
 ## 6. Add the custom cards
 
-* Copy ha-blinds-frame-card.js and ha-fan-loop-card.js from this repo’s www/
+* Copy **ha-blinds-frame-card.js** and **ha-fan-loop-card.js** from this repo’s www/
 folder into /config/www/ on your HA instance.
-* Settings → Dashboards → Resources
+
+
+Add it as a Lovelace resource:
+**configuration.yaml** or **UI → Settings → Dashboards → Resources → type: module**
+
+url:
 
 ```bash
 /local/ha-blinds-frame-card.js?v=15   (JavaScript Module)
@@ -128,7 +135,7 @@ folder into /config/www/ on your HA instance.
 
 (Files live in www/ inside this repo – copy them to /config/www.)
 
-## 7. YAML for your picture-elements view
+## 8. YAML for your picture-elements view
 
 ```bash
 type: picture-elements
@@ -166,12 +173,13 @@ png_path must be the prefix of your numbered PNGs (no index, no extension).
 
 The cards automatically fall back to those PNGs on mobile where autoplay may be blocked.
 
+## For more information about the cards, see full documentation
 
-## 8 · What happens behind the scenes
+## 9 · What happens behind the scenes
 *Blinds card
 	*Because every WebM frame is an I-frame, the browser can jump straight to frame N.
 	*The card calculates duration from your motor spec (percent / speed) and eases the motion with JavaScript requestAnimationFrame.
-	*When the glide stops, the current video frame is drawn onto a hidden canvas and shown as a PNG overlay—no “tap-to-play” icon.
+	*When the glide stops, the current video frame is drawn onto a hidden canvas and shown as a PNG.
 
 *Fan card
 	*WebM silently loops; when entity.state='off' the first frame is frozen.
@@ -179,7 +187,7 @@ The cards automatically fall back to those PNGs on mobile where autoplay may be 
 
 
 
-## 9 · Support
+## 10 · Support
 If this saved you a weekend of trial-and-error,
 buy me a coffee and keep the ideas brewing ☕ – https://buymeacoffee.com/tikel
 
