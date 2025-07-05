@@ -95,6 +95,7 @@ ffmpeg -framerate 60 -i fan_%03d.png \
        fan_loop.webm
 
 
+
 * -g 1 -keyint_min 1 ⇒ GOP = 1 → instant seeking.
 * yuva420p keeps transparency.
 * Adjust -crf (lower = higher quality, larger file).
@@ -110,7 +111,6 @@ Example structure (choose any folder names):
   ├─ fan_000.png … fan_071.png
   ├─ blinds_100f.webm
   └─ fan_loop.webm
-
 
 
 
@@ -160,3 +160,26 @@ elements:
       top: 18%
       width: 90px
 
+
+png_path must be the prefix of your numbered PNGs (no index, no extension).
+
+The cards automatically fall back to those PNGs on mobile where autoplay may be blocked.
+
+
+## 8 · What happens behind the scenes
+*Blinds card
+	*Because every WebM frame is an I-frame, the browser can jump straight to frame N.
+	*The card calculates duration from your motor spec (percent / speed) and eases the motion with JavaScript requestAnimationFrame.
+	*When the glide stops, the current video frame is drawn onto a hidden canvas and shown as a PNG overlay—no “tap-to-play” icon.
+
+*Fan card
+	*WebM silently loops; when entity.state='off' the first frame is frozen.
+	*Playback rate is mapped from percentage (0-100) or preset_mode (low/medium/high).
+
+
+
+## 9 · Support
+If this saved you a weekend of trial-and-error,
+buy me a coffee and keep the ideas brewing ☕ – https://buymeacoffee.com/tikel
+
+Happy automating!
