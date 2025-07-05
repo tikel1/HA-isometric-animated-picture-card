@@ -14,6 +14,8 @@
 
 This repository provides custom Home Assistant cards that enable **smooth video playback and frame-by-frame animations** within your dashboard. No more static icons – bring your smart home to life with dynamic, responsive visualizations that react to your device states in real-time.
 
+
+
 ## 🤖 **AI-Generated Animation Tutorial Included!**
 
 **📚 [Complete Step-by-Step AI Animation Guide](docs/ai-animation-guide.md)**
@@ -27,7 +29,9 @@ We've included a **comprehensive tutorial** showing you how to create the exact 
 - ⚡ Optimize animations for perfect performance
 - 🎯 Real examples: blinds, fans, and more
 
-**⏱️ Time investment:** 20-30 minutes for your first professional animation
+**[💛 Support Me on Buy Me a Coffee](https://www.buymeacoffee.com/tikel)
+
+[![Buy Me a Coffee](examples/coffee.webp)](https://www.buymeacoffee.com/tikel)
 
 ---
 
@@ -148,26 +152,15 @@ elements:
 
 ### **🚀 No 3D Software Experience Required!**
 
-**📖 [Step-by-Step AI Animation Tutorial](docs/ai-animation-guide.md)**
+**📖 [Step-by-Step AI Animation Tutorial](docs/tutorial.md)**
 
-We've created a **complete guide** that shows you exactly how to recreate the animations in our examples using **AI tools only**. Perfect for beginners who want professional results without learning complex 3D software.
+We've created a **complete guide** that shows you exactly how to recreate the animations in our examples using **[chatGPT](https://chat.openai.com/)** and **[Kling.ai](https://klingai.com/h5-app/invitation?code=7BLZEBP5VTT5)**. Perfect for beginners who want professional results without learning complex 3D software.
 
 **🎯 What's included in the tutorial:**
 - 🤖 **AI Model Generation**: Create 3D models using text prompts
 - 🎬 **Animation Creation**: Generate smooth frame sequences automatically
 - 📹 **Format Conversion**: Convert to WebM and PNG for Home Assistant
 - ⚡ **Performance Optimization**: Tips for smooth playback
-- 📋 **Real Examples**: Step-by-step recreation of our sample animations
-
-**✅ Complete examples provided:**
-- 🪟 **Blinds Animation**: From fully open to fully closed
-- 🌀 **Fan Animation**: Rotating blades with variable speed
-- 🌅 **Day/Night Transition**: Lighting and color changes
-- 🚪 **Garage Door**: Opening and closing sequences
-
-**⏱️ Time investment:** 20-30 minutes for your first professional animation  
-**💰 Cost:** Free AI tools + optional premium features  
-**🎓 Prerequisites:** None! Complete beginner-friendly
 
 ---
 
@@ -190,13 +183,11 @@ Current: 25% → Target: 75% = Animated jump between frames
 - 🪟 **Blinds & Covers**: Position-based animations
 - 🌅 **Day/Night Cycles**: Lighting transitions, weather changes
 - 🚪 **Garage Doors**: Open/close sequences
-- 🌡️ **Temperature Visualization**: Color/state changes
 - 💡 **Brightness Controls**: Dimming effects
 
 **Key Features:**
 - ⏱️ **Smart Cooldown**: Prevents animation spam during rapid changes
 - 🎯 **Frame-Perfect**: Jumps to exact frame based on entity value
-- 📐 **Configurable Easing**: Smooth acceleration/deceleration between frames
 - 🔄 **Auto-Freeze**: Maintains final position after animation completes
 
 ### **🔄 Loop Animation Card (`ha-fan-loop-card`)**
@@ -230,19 +221,19 @@ Entity Value 100% → 2.0x loop speed
 
 ## 📖 Documentation
 
-### **📚 [Complete Documentation](docs/README.md)**
+### **📚 [Complete Documentation](docs/ha-animation-cards-docs.md)**
 - Detailed parameter reference
 - Configuration examples
 - Troubleshooting guide
 - Performance optimization tips
 
-### **🎬 [Animation Creation Guide](docs/ai-animation-guide.md)**
+### **🎬 [Animation Creation Guide](docs/tutorial.md)**
 - Step-by-step AI animation tutorial
 - File format conversion
 - Optimization techniques
 - Best practices
 
-### **🏗️ [Integration Examples](docs/examples.md)**
+### **🏗️ [Integration Examples](examples/screen-20250703-220829~2.mp4)**
 - Real-world dashboard layouts
 - Advanced styling techniques
 - Multi-device scenarios
@@ -317,6 +308,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🌟 Show Your Support
 
 If this project helps you create amazing Home Assistant dashboards, please:
+- ☕ **[Buy me a coffee](https://www.buymeacoffee.com/tikel)**
 - ⭐ **Star this repository**
 - 🔄 **Share with the community**
 - 📸 **Post your creations** (tag us!)
