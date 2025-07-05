@@ -112,7 +112,7 @@ The bedroom ceiling fan begins rotating smoothly and continuously. The blinds re
 ```
 
 **For animations like ceiling fans, it's recommended to render them separately. You can cut out the fan from the original image using Photoshop or any other editing tool, and then upload it to Kling as a separate asset.
-![fan](../examples/isolated-fan.jpg)
+![fan](../examples/isolated-fan.png)
 
 3. **Download the result** - this should be a seamless loop
 
