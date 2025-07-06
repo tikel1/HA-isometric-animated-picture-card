@@ -80,7 +80,7 @@ Think about what in your room moves:
 
 ### Create Blinds Animation
 
-1. **Go to Kling.ai** and upload your isometric room image
+1. **Go to [Kling.ai](https://klingai.com/h5-app/invitation?code=7BLZEBP5VTT5)** and upload your isometric room image
 2. **Use this prompt:**
 
 ![kling](../examples/kling.jpg)
@@ -112,7 +112,7 @@ The bedroom ceiling fan begins rotating smoothly and continuously. The blinds re
 ```
 
 **For animations like ceiling fans, it's recommended to render them separately. You can cut out the fan from the original image using Photoshop or any other editing tool, and then upload it to Kling as a separate asset.
-![fan](../examples/isolated-fan.png)
+![fan](../examples/isolated-fan.png)**
 
 3. **Download the result** - this should be a seamless loop
 
