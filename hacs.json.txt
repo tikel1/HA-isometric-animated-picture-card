@@ -1,0 +1,7 @@
+{
+  "name": "Dynamic Video Animation Card",
+  "content_in_root": false,
+  "filename": "dist/main.js",
+  "type": "lovelace",
+  "render_readme": true
+}
