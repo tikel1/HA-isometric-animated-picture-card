@@ -8,7 +8,6 @@
 [![WebM Support](https://img.shields.io/badge/WebM-Supported-green.svg)](https://en.wikipedia.org/wiki/WebM)
 [![Mobile Compatible](https://img.shields.io/badge/Mobile-PNG%20Fallback-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
 [![AI Generated](https://img.shields.io/badge/AI%20Generated-Animations-purple.svg)](docs/ai-animation-guide.md)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **Finally! Play videos and animations directly inside your Lovelace cards** 🚀
 
